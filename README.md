@@ -12,7 +12,8 @@
 ### Операционные системы и виртуализация (Linux)
 
 1. Использование команды cat в Linux
-    - Создать два текстовых файла: "Pets"(Домашние животные) и "Pack animals"(вьючные животные), используя команду cat в терминале Linux. В первом файле перечислить собак, кошек и хомяков. Во втором — лошадей, верблюдов и ослов.
+   
+   - Создать два текстовых файла: "Pets"(Домашние животные) и "Pack animals"(вьючные животные), используя команду cat в терминале Linux. В первом файле перечислить собак, кошек и хомяков. Во втором — лошадей, верблюдов и ослов.
      
 **cat > Pets.txt**
 
@@ -31,13 +32,17 @@
 
    **Donkey**
 
+   
+
 - Объединить содержимое этих двух файлов в один и просмотреть его содержимое.
 
   **cat Pets.txt PackAnimals.txt > AllAnimals.txt**
 
   **cat AllAnimals.txt**
+  
 
-    - Переименовать получившийся файл в "Human Friends"
+
+- Переименовать получившийся файл в "Human Friends"
   
 
    **mv AllAnimals.txt "HumanFriends.txt**
@@ -69,6 +74,8 @@
    **mysql> CREATE USER admin@localhost IDENTIFIED BY '1234';**
 
    **mysql> GRANT ALL ON *.* TO admin@localhost WITH GRANT OPTION;**
+   ![MySQL](https://github.com/MarinaZhdanovich/exam_work_final/assets/117445657/308405f1-6a58-4be7-9cc9-7df4ab689502)
+
 
 4. Управление deb-пакетами
     - Установить и затем удалить deb-пакет, используя команду dpkg.
@@ -89,4 +96,16 @@
 
 5. История команд в терминале Ubuntu
     - Сохранить и выложить историю ваших терминальных команд в Ubuntu.
+      ![История1](https://github.com/MarinaZhdanovich/exam_work_final/assets/117445657/0b517288-b37c-4817-a7e1-829cf57c0fcf)
+      
+      ![История2](https://github.com/MarinaZhdanovich/exam_work_final/assets/117445657/27d9ab9f-1c4e-4cbc-8836-4c2044e17d77)
+      
+      ![iИстория3](https://github.com/MarinaZhdanovich/exam_work_final/assets/117445657/45b8f473-6e35-4497-a787-608f32644839)
+      
+      ![История4](https://github.com/MarinaZhdanovich/exam_work_final/assets/117445657/b6e666c3-cf69-4ee4-81d4-4f5734b70018)
+
+
+
+
+
       
