@@ -64,8 +64,8 @@
       
       # Вход в MySQL
       sudo mysql -u root
-      mysql> CREATE USER 'admin'@'localhost' IDENTIFIED BY '1234';
-      mysql> GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
+      mysql> CREATE USER admin@localhost IDENTIFIED BY '1234';
+      mysql> GRANT ALL PRIVILEGES ON *.* TO admin@localhost WITH GRANT OPTION;
       ```
 
 ![MySQL](https://github.com/MarinaZhdanovich/exam_work_final/assets/117445657/308405f1-6a58-4be7-9cc9-7df4ab689502)
