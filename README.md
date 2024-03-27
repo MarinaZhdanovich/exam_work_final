@@ -76,7 +76,7 @@
 
      ```bash
      # Установка пакета
-     wget https://browser.yandex.by/
+     https://browser.yandex.by/
      sudo dpkg -i Yandex.deb
      sudo apt install jq  # yandex-browser-stable зависит от jq
      sudo apt --fix-broken install
