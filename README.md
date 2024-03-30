@@ -89,18 +89,18 @@
 
 5. **История команд в терминале Ubuntu**
    - Сохранить и выложить историю ваших терминальных команд в Ubuntu.
-      ![История1](https://github.com/MarinaZhdanovich/exam_work_final/assets/117445657/0b517288-b37c-4817-a7e1-829cf57c0fcf)
+      ![First](https://github.com/MarinaZhdanovich/exam_work_final/assets/117445657/0b517288-b37c-4817-a7e1-829cf57c0fcf)
       
-      ![История2](https://github.com/MarinaZhdanovich/exam_work_final/assets/117445657/27d9ab9f-1c4e-4cbc-8836-4c2044e17d77)
+      ![Second](https://github.com/MarinaZhdanovich/exam_work_final/assets/117445657/27d9ab9f-1c4e-4cbc-8836-4c2044e17d77)
       
-      ![iИстория3](https://github.com/MarinaZhdanovich/exam_work_final/assets/117445657/45b8f473-6e35-4497-a787-608f32644839)
+      ![Third](https://github.com/MarinaZhdanovich/exam_work_final/assets/117445657/45b8f473-6e35-4497-a787-608f32644839)
       
-      ![История4](https://github.com/MarinaZhdanovich/exam_work_final/assets/117445657/b6e666c3-cf69-4ee4-81d4-4f5734b70018)
+      ![Fourth](https://github.com/MarinaZhdanovich/exam_work_final/assets/117445657/b6e666c3-cf69-4ee4-81d4-4f5734b70018)
 
 6. **Диаграмма классов**
 
     - Создать диаграмму классов с родительским классом "Животные", и двумя подклассами: "Pets" и "Pack animals". В составы классов которых в случае Pets войдут классы: собаки, кошки, хомяки, а в класс Pack animals войдут: Лошади, верблюды и ослы). Каждый тип животных будет характеризоваться (например, имена, даты рождения, выполняемые команды и т.д.). Диаграмму можно нарисовать в любом редакторе, такими как Lucidchart, Draw.io, Microsoft Visio и других.
-![Диаграмма классов](https://github.com/MarinaZhdanovich/exam_work_final/assets/117445657/966006af-f894-4557-a4a5-083afd67c368)
+![Diagram](https://github.com/MarinaZhdanovich/exam_work_final/assets/117445657/966006af-f894-4557-a4a5-083afd67c368)
 
 7. **Работа с MySQL**
 
