@@ -97,8 +97,166 @@
       
       ![История4](https://github.com/MarinaZhdanovich/exam_work_final/assets/117445657/b6e666c3-cf69-4ee4-81d4-4f5734b70018)
 
+6. **Диаграмма классов**
 
+    - Создать диаграмму классов с родительским классом "Животные", и двумя подклассами: "Pets" и "Pack animals". В составы классов которых в случае Pets войдут классы: собаки, кошки, хомяки, а в класс Pack animals войдут: Лошади, верблюды и ослы). Каждый тип животных будет характеризоваться (например, имена, даты рождения, выполняемые команды и т.д.). Диаграмму можно нарисовать в любом редакторе, такими как Lucidchart, Draw.io, Microsoft Visio и других.
 
+7. **Работа с MySQL**
 
+    - После создания диаграммы классов в 6 пункте, в 7 пункте база данных "Human Friends" должна быть структурирована в соответствии с этой диаграммой. Например, можно создать таблицы, которые будут соответствовать классам "Pets" и "Pack animals", и в этих таблицах будут поля, которые характеризуют каждый тип животных (например, имена, даты рождения, выполняемые команды и т.д.).
+
+      7.1. - В ранее подключенном MySQL создать базу данных с названием "Human Friends".
+      - Создать таблицы, соответствующие иерархии из вашей диаграммы классов.
+      - Заполнить таблицы данными о животных, их командах и датами рождения.
+
+    ```bash
+    CREATE DATABASE Human_Friends;
+    USE Human_friends;
+    
+    CREATE TABLE Animals
+    (
+        Id INT AUTO_INCREMENT PRIMARY KEY, 
+        Animal_Groups VARCHAR(20)
+    );
+    
+    INSERT INTO Animals (Animal_Groups)
+    VALUES ('Pets'),
+           ('Pack animals');
+    
+    CREATE TABLE Pets
+    (
+        Id INT AUTO_INCREMENT PRIMARY KEY,
+        Type VARCHAR(20),
+        Animal_Groups_id INT,
+        FOREIGN KEY (Animal_Groups_id) REFERENCES Animals(Id) 
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE
+    );
+    
+    INSERT INTO Pets (Type, Animal_Groups_id)
+    VALUES ('Dog', 1),
+           ('Cat', 1),  
+           ('Hamster', 1); 
+    
+    CREATE TABLE Pack_Animals
+    (
+        Id INT AUTO_INCREMENT PRIMARY KEY,
+        Type VARCHAR(20),
+        Animal_Groups_id INT,
+        FOREIGN KEY (Animal_Groups_id) REFERENCES Animals(Id) 
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE
+    );
+    
+    INSERT INTO Pack_Animals (Type, Animal_Groups_id)
+    VALUES ('Horse', 2),
+           ('Camel', 2),  
+           ('Donkey', 2); 
+    
+    
+    CREATE TABLE Dog 
+    (       
+        Id INT AUTO_INCREMENT PRIMARY KEY, 
+        Name VARCHAR(20), 
+        BirthDate DATE,
+        Commands VARCHAR(50),
+        Type_id INT,
+        FOREIGN KEY (Type_id) REFERENCES Pets (Id) 
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE
+    );
+    
+    INSERT INTO Dog (Name, BirthDate, Commands, Type_id)
+    VALUES ('Cooper ', '2023-01-01', 'Sit, Stay, Fetch', 1),
+           ('Buddy', '2023-01-02', 'Sit, Paw, Bark', 1),  
+           ('Milo', '2023-01-03', 'Sit, Stay, Roll', 1);
+           
+    CREATE TABLE Cat 
+    (       
+        Id INT AUTO_INCREMENT PRIMARY KEY, 
+        Name VARCHAR(20), 
+        BirthDate DATE,
+        Commands VARCHAR(50),
+        Type_id INT,
+        FOREIGN KEY (Type_id) REFERENCES Pets (Id) 
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE
+    );
+    
+    INSERT INTO Cat (Name, BirthDate, Commands, Type_id)
+    VALUES ('Lucky', '2023-02-01', 'Sit, Pounce', 2),
+           ('Jake', '2023-02-02', 'Sit, Pounce, Scratch', 2),  
+           ('Mick', '2023-02-03', 'Meow, Scratch, Jump', 2);
+           
+           
+    CREATE TABLE Hamster 
+    (       
+        Id INT AUTO_INCREMENT PRIMARY KEY, 
+        Name VARCHAR(20), 
+        BirthDate DATE,
+        Commands VARCHAR(50),
+        Type_id INT,
+        FOREIGN KEY (Type_id) REFERENCES Pets (Id) 
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE
+    );
+    
+    INSERT INTO Hamster (Name, BirthDate, Commands, Type_id)
+    VALUES ('Paddy', '2024-03-01', 'Roll, Hide', 3),
+           ('Rocky', '2024-03-02', 'Roll, Spin', 3),  
+           ('Amelli', '2024-03-03', 'Roll', 3);
+    
+    CREATE TABLE Horse 
+    (       
+        Id INT AUTO_INCREMENT PRIMARY KEY, 
+        Name VARCHAR(20), 
+        BirthDate DATE,
+        Commands VARCHAR(100),
+        Type_id INT,
+        FOREIGN KEY (Type_id) REFERENCES Pack_Animals (Id) 
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE
+    );
+    
+    INSERT INTO Horse (Name, BirthDate, Commands, Type_id)
+    VALUES ('Gwen', '2020-04-01', 'Trot, Canter, Gallop', 1),
+           ('Tucker', '2020-04-02', 'Trot, Canter', 1),  
+           ('Whisper', '2020-04-03', 'Trot, Jump, Gallop', 1);
+           
+           
+    CREATE TABLE Camel 
+    (       
+        Id INT AUTO_INCREMENT PRIMARY KEY, 
+        Name VARCHAR(20), 
+        BirthDate DATE,
+        Commands VARCHAR(100),
+        Type_id INT,
+        FOREIGN KEY (Type_id) REFERENCES Pack_Animals (Id) 
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE
+    );
+    
+    INSERT INTO Camel (Name, BirthDate, Commands, Type_id)
+    VALUES ('Arielle', '2021-05-01', 'Walk, Carry Load', 2),
+           ('Charlie', '2021-05-02', 'Walk, Sit', 2),  
+           ('Sandy', '2021-05-03', 'Walk, Run', 2);
+           
+    CREATE TABLE Donkey 
+    (       
+        Id INT AUTO_INCREMENT PRIMARY KEY, 
+        Name VARCHAR(20), 
+        BirthDate DATE,
+        Commands VARCHAR(100),
+        Type_id INT,
+        FOREIGN KEY (Type_id) REFERENCES Pack_Animals (Id) 
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE
+    );
+    
+    INSERT INTO Donkey (Name, BirthDate, Commands, Type_id)
+    VALUES ('Bella', '2022-06-01', 'Walk, Carry Load, Bray', 3),
+           ('Rufus', '2022-06-02', 'Walk, Bray, Kick', 3),  
+           ('Peach', '2022-06-03', 'Walk, Carry Load', 3);
+    ```
 
       
