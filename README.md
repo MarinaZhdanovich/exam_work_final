@@ -301,4 +301,81 @@
 12. Объединить все таблицы в одну, при этом сохраняя поля, указывающие на
     прошлую принадлежность к старым таблицам.
 
-
+    ```bash
+    SELECT
+    Dog.Id,
+    Dog.Name,
+    Dog.BirthDate,
+    Dog.Commands,
+    Pets.Type,
+    Animals.Animal_Groups
+    FROM
+    Dog
+    JOIN Pets ON Dog.Type_id = Pets.Id
+    JOIN Animals ON Pets.Animal_Groups_id = Animals.Id
+    
+    UNION ALL
+    SELECT
+    Cat.Id,
+    Cat.Name,
+    Cat.BirthDate,
+    Cat.Commands,
+    Pets.Type,
+    Animals.Animal_Groups
+    FROM
+    Cat
+    JOIN Pets ON Cat.Type_id = Pets.Id
+    JOIN Animals ON Pets.Animal_Groups_id = Animals.Id
+    
+    UNION ALL
+    SELECT
+    Hamster.Id,
+    Hamster.Name,
+    Hamster.BirthDate,
+    Hamster.Commands,
+    Pets.Type,
+    Animals.Animal_Groups
+    FROM
+    Hamster
+    JOIN Pets ON Hamster.Type_id = Pets.Id
+    JOIN Animals ON Pets.Animal_Groups_id = Animals.Id
+    
+    UNION ALL
+    SELECT
+    Horse.Id,
+    Horse.Name,
+    Horse.BirthDate,
+    Horse.Commands,
+    Pack_Animals.Type,
+    Animals.Animal_Groups
+    FROM
+    Horse
+    JOIN Pack_Animals ON Horse.Type_id = Pack_Animals.Id
+    JOIN Animals ON Pack_Animals.Animal_Groups_id = Animals.Id
+    
+    UNION ALL
+    SELECT
+    Camel.Id,
+    Camel.Name,
+    Camel.BirthDate,
+    Camel.Commands,
+    Pack_Animals.Type,
+    Animals.Animal_Groups
+    FROM
+    Camel
+    JOIN Pack_Animals ON Camel.Type_id = Pack_Animals.Id
+    JOIN Animals ON Pack_Animals.Animal_Groups_id = Animals.Id
+    
+    UNION ALL
+    SELECT
+    Donkey.Id,
+    Donkey.Name,
+    Donkey.BirthDate,
+    Donkey.Commands,
+    Pack_Animals.Type,
+    Animals.Animal_Groups
+    FROM
+    Donkey
+    JOIN Pack_Animals ON Donkey.Type_id = Pack_Animals.Id
+    JOIN Animals ON Pack_Animals.Animal_Groups_id = Animals.Id;
+     ```
