@@ -315,6 +315,7 @@
     JOIN Animals ON Pets.Animal_Groups_id = Animals.Id
     
     UNION ALL
+    
     SELECT
     Cat.Id,
     Cat.Name,
@@ -328,6 +329,7 @@
     JOIN Animals ON Pets.Animal_Groups_id = Animals.Id
     
     UNION ALL
+    
     SELECT
     Hamster.Id,
     Hamster.Name,
@@ -341,6 +343,7 @@
     JOIN Animals ON Pets.Animal_Groups_id = Animals.Id
     
     UNION ALL
+    
     SELECT
     Horse.Id,
     Horse.Name,
@@ -354,6 +357,7 @@
     JOIN Animals ON Pack_Animals.Animal_Groups_id = Animals.Id
     
     UNION ALL
+    
     SELECT
     Camel.Id,
     Camel.Name,
@@ -367,6 +371,7 @@
     JOIN Animals ON Pack_Animals.Animal_Groups_id = Animals.Id
     
     UNION ALL
+    
     SELECT
     Donkey.Id,
     Donkey.Name,
