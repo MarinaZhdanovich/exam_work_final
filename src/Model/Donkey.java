@@ -1,4 +1,4 @@
-package Models;
+package Model;
 
 import java.sql.Date;
 
@@ -24,5 +24,22 @@ public class Donkey extends PackAnimals{
 
     public String getCommands() {
         return commands;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public void setCommands(String commands) {
+        this.commands = commands;
+    }
+
+    @Override
+    public String toString() {
+        return getId() + " " + getType() + " " + name + " " + birthDate + " " + commands;
     }
 }

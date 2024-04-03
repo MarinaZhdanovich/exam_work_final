@@ -1,5 +1,3 @@
-package Model;
-
 public class Counter implements AutoCloseable{
     private int value;
 

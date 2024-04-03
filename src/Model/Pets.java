@@ -1,4 +1,4 @@
-package Models;
+package Model;
 
 public class Pets extends Animals{
     protected String type;
@@ -10,5 +10,9 @@ public class Pets extends Animals{
 
     public String getType() {
         return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

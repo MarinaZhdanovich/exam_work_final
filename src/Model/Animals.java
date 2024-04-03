@@ -1,4 +1,4 @@
-package Models;
+package Model;
 
 public class Animals {
     protected int id;
@@ -15,5 +15,13 @@ public class Animals {
 
     public String getAnimalGroups() {
         return animalGroups;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setAnimalGroups(String animalGroups) {
+        this.animalGroups = animalGroups;
     }
 }
