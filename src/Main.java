@@ -166,7 +166,7 @@ public class Main {
                 System.out.println("Осел с id " + index + " обучен новым командам: " + newCommands);
             }
         } else {
-            System.out.println("Животное с номером " + index + " не найдено.");
+            System.out.println("Животное с id " + index + " не найдено.");
         }
     }
 }

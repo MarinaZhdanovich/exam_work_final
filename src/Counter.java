@@ -12,7 +12,7 @@ public class Counter implements AutoCloseable{
     @Override
     public void close() {
         if (value > 0) {
-            throw new IllegalStateException("Ресурс не был закрыт или был использован не в ресурсном блоке try");
+            throw new IllegalStateException("Ресурс не был закрыт");
         }
     }
 }
